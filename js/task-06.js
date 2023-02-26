@@ -3,7 +3,7 @@ let dataLength = textInput.getAttribute("data-length");
 
 textInput.addEventListener("blur", (event) => {
 
-  if (event.currentTarget.value.length == dataLength) {
+  if (event.currentTarget.value.trim().length === Number(dataLength)) {
     textInput.classList.add("valid")
     if (textInput.classList.contains("invalid")) {
       textInput.classList.remove("invalid")
